@@ -1,5 +1,8 @@
-import Link from 'next/link';
 import MainCard from './components/MainCard';
+
+export const metadata = {
+  title: 'New Leaf - Home',
+};
 
 const App = () => {
   return (

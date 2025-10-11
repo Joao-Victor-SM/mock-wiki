@@ -1,7 +1,11 @@
+export const metadata = {
+  title: 'About',
+};
+
 const AboutPage = () => {
   return (
     <main className="px-24 p-8 h-full flex flex-col space-y-6">
-      <h1 className="text-6xl">About us</h1>
+      <h1 className="text-6xl font-bold">About us</h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
         earum fugiat ipsa optio dolor deleniti voluptatem atque minus ex

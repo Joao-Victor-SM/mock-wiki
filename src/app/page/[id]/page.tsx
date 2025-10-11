@@ -1,11 +1,17 @@
-import TextWarning from "./components/TextWarning";
+import TextWarning from './components/TextWarning';
 
-interface WikiPageProps {
-  params: { id: string };
+export function generateMetadata({params}: WikiPageProps) {
+  return {
+    title: `Index #${params.id}`, // your page title
+  };
 }
 
-export default async function WikiPage({ params }: WikiPageProps) {
-  const { id } = params;
+interface WikiPageProps {
+  params: {id: string};
+}
+
+export default async function WikiPage({params}: WikiPageProps) {
+  const {id} = params;
 
   return (
     <article
