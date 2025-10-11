@@ -1,5 +1,5 @@
 import CardSection from './components/CardSection';
-import {api} from './api';
+import {GET as getCardsHandler} from './api/cards/route';
 import {CardSectionInterface} from './types/Cards';
 
 export const metadata = {
@@ -7,14 +7,10 @@ export const metadata = {
   description: 'Foster care nonprofit institution',
 };
 
-async function getCards() {
-  const res = await api.get<CardSectionInterface[]>('/api/cards');
-  return res.data;
-}
+const res = await getCardsHandler();
+const cards: CardSectionInterface[] = await res.json();
 
 const App = async () => {
-  const cards = await getCards();
-
   return (
     <main className="sm:px-24 p-4 sm:p-8 grid content-start gap-8">
       <section className="grid gap-4">
