@@ -22,6 +22,32 @@ export async function GET() {
         },
       ],
     },
+    {
+      title: 'Projects',
+      cards: [
+        {
+          title: 'Project Pragma',
+          href: 'page/pragma',
+          content: `Pragma is a project whose purpose is to make cheap, reliable, scalable bio-enhanced soldiers in scale. Each soldier have the expected strength
+           of at least 3 men, and are able to endure the harsh conditions of war.`,
+        },
+        {
+          title: 'Project Aegis',
+          href: 'page/aegis',
+          content: `Aegis focuses on the development of portable energy shields for field use. Early prototypes can withstand small-arms fire for limited durations.`,
+        },
+        {
+          title: 'Project Helix',
+          href: 'page/helix',
+          content: `Helix aims to enhance cognitive performance via neurochemical augmentation. Test subjects have shown improved strategic reasoning under stress.`,
+        },
+        {
+          title: 'Project Obsidian',
+          href: 'page/obsidian',
+          content: `Obsidian experiments with adaptive camouflage and sound-dampening suits for stealth operations in controlled environments.`,
+        },
+      ],
+    },
   ];
 
   return Response.json(data);
