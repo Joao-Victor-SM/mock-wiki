@@ -1,5 +1,6 @@
 import CardSection from './components/CardSection';
 import {api} from './api';
+import {CardSectionInterface} from './types/Cards';
 
 export const metadata = {
   title: 'New Leaf - Home',
@@ -7,7 +8,7 @@ export const metadata = {
 };
 
 async function getCards() {
-  const res = await api.get('/api/cards');
+  const res = await api.get<CardSectionInterface[]>('/api/cards');
   return res.data;
 }
 
@@ -34,7 +35,9 @@ const App = async () => {
           materials is strictly prohibited.
         </p>
       </section>
-      <CardSection title="Houses" cards={cards} />
+      {cards.map((card, key) => (
+        <CardSection title={card.title} cards={card.cards} key={key} />
+      ))}
     </main>
   );
 };

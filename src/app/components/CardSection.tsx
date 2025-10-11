@@ -1,15 +1,7 @@
+import {CardSectionInterface} from '../types/Cards';
 import MainCard from './MainCard';
 
-interface Card {
-  title: string;
-  href: string;
-  content: string;
-}
-interface props {
-  cards: Card[];
-  title: string;
-}
-export default function CardSection({cards, title}: props) {
+export default function CardSection({cards, title}: CardSectionInterface) {
   return (
     <section className="w-full grid content-start gap-4">
       <h2 className="text-5xl font-bold">{title}</h2>
