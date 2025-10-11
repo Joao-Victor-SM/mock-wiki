@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {ReactNode} from 'react';
 import RecommendationCard from './components/RecommendationCard';
 
