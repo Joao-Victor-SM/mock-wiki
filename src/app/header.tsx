@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -8,9 +8,12 @@ const Header = () => {
           New Leaf
         </h1>
       </Link>
-      <nav className="flex gap-2 ml-auto">
-        <Link href="/" className="text-blue-500 hover:underline">
+      <nav className="flex ml-auto divide-x">
+        <Link href="/" className="text-blue-500 hover:underline px-1.5">
           Home
+        </Link>
+        <Link href="/about" className="text-blue-500 hover:underline px-1.5">
+          About
         </Link>
       </nav>
     </header>
