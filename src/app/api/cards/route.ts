@@ -41,11 +41,6 @@ export async function GET() {
           href: 'page/helix',
           content: `Helix aims to enhance cognitive performance via neurochemical augmentation. Test subjects have shown improved strategic reasoning under stress.`,
         },
-        {
-          title: 'Project Obsidian',
-          href: 'page/obsidian',
-          content: `Obsidian experiments with adaptive camouflage and sound-dampening suits for stealth operations in controlled environments.`,
-        },
       ],
     },
   ];
