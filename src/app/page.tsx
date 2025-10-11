@@ -7,7 +7,7 @@ export const metadata = {
 
 const App = () => {
   return (
-    <main className="px-24 p-8 grid content-start gap-8">
+    <main className="sm:px-24 p-4 sm:p-8 grid content-start gap-8">
       <section className="grid gap-4">
         <h1 className="text-6xl font-bold">Home</h1>
         <p>
@@ -28,7 +28,7 @@ const App = () => {
       </section>
       <section className="w-full grid content-start gap-4">
         <h2 className="text-5xl font-bold">Info</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
           <MainCard
             href="page/foo"
             title="House Locke"

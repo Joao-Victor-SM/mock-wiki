@@ -3,7 +3,7 @@ import RecommendationCard from './components/RecommendationCard';
 
 export default function Layout({children}: {children: ReactNode}) {
   return (
-    <main className="flex gap-4 p-4 px-24 h-full bg-neutral-300 font-mono text-sm">
+    <main className="flex gap-4 p-4 sm:px-24 h-full bg-neutral-300 font-mono text-sm flex-col sm:flex-row">
       <section>{children}</section>
 
       <aside className="w-80 border border-gray-400 bg-gradient-to-b from-gray-100 to-gray-200 p-1 shadow-md grid content-start gap-1">

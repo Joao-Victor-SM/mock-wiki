@@ -2,7 +2,7 @@ import TextWarning from './components/TextWarning';
 
 export function generateMetadata({params}: WikiPageProps) {
   return {
-    title: `Index #${params.id}`, // your page title
+    title: `Index #${params.id}`,
   };
 }
 
@@ -15,10 +15,10 @@ export default async function WikiPage({params}: WikiPageProps) {
 
   return (
     <article
-      className="min-h-full p-4 w-[clamp(340px,80vw,1100px)] 
+      className="min-h-full p-4 w-[clamp(320px,80vw,1100px)] 
       border border-gray-400 shadow-inner bg-gradient-to-b from-gray-100 to-gray-200 
-      flex flex-col gap-3 justify-start font-mono text-sm text-gray-800
-      rounded-sm"
+      flex gap-3 justify-start font-mono text-sm text-gray-800
+      rounded-sm flex-col"
     >
       <h1 className="text-2xl font-bold border-b-2 border-gray-500 pb-1 mb-2">
         Wiki Page <b>#{id}</b>
