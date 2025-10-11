@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     template: 'New Leaf - %s',
     default: 'New Leaf',
   },
+  description: 'Foster care nonprofit institution',
 };
 
 export default function RootLayout({
