@@ -2,6 +2,7 @@ import MainCard from './components/MainCard';
 
 export const metadata = {
   title: 'New Leaf - Home',
+  description: 'Foster care nonprofit institution',
 };
 
 const App = () => {
