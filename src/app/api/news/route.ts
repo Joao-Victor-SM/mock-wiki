@@ -1,7 +1,6 @@
-import {prisma} from '@/app/lib/prisma';
+import {prisma} from '@/lib/prisma';
 import {NextResponse} from 'next/server';
 
-// GET /api/news
 export async function GET() {
   try {
     const news = await prisma.news.findMany({
