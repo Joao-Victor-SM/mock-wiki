@@ -31,9 +31,11 @@ const App = async () => {
           materials is strictly prohibited.
         </p>
       </section>
-      {articles.map((card, key) => (
-        <CardSection title={card.title} cards={card.cards} key={key} />
-      ))}
+      {articles
+        .filter((article) => article.cards.length)
+        .map((card, key) => (
+          <CardSection title={card.title} cards={card.cards} key={key} />
+        ))}
     </main>
   );
 };
