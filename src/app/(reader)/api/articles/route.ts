@@ -1,4 +1,4 @@
-import {CardSectionInterface} from '@/app/types/Cards';
+import {CardSectionInterface} from '@/app/(reader)/types/Cards';
 import {prisma} from '@/lib/prisma';
 import {NextResponse} from 'next/server';
 

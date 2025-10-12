@@ -1,6 +1,6 @@
 import type {Metadata} from 'next';
-import './globals.css';
-import {ReactNode} from 'react';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export const metadata: Metadata = {
   title: {
@@ -13,7 +13,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: ReactNode;
+  children: React.ReactNode;
 }>) {
-  return <html lang="en">{children}</html>;
+  return (
+    <body className="h-screen bg-gray-100 flex flex-col">
+      <Header />
+      {children}
+      <Footer />
+    </body>
+  );
 }
