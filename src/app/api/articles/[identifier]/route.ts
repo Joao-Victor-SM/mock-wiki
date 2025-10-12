@@ -5,9 +5,12 @@ interface Params {
   identifier: string;
 }
 
-export async function GET(req: NextRequest, {params}: {params: Params}) {
+export async function GET(
+  req: NextRequest,
+  {params}: {params: Promise<Params>},
+) {
   try {
-    const {identifier} = params;
+    const {identifier} = await params;
     const selectedArticle = await prisma.news.findUnique({
       where: {identifier},
     });
