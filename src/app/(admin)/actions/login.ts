@@ -19,6 +19,5 @@ export async function login(formData: FormData): Promise<LoginResult> {
   const valid = await verifyPassword(password, user.password);
   if (!valid) return {error: 'Invalid username or password'};
 
-  // login successful → redirect server-side
   redirect('/dashboard');
 }
