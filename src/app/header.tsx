@@ -12,10 +12,10 @@ const Header = () => {
         <h1 className="text-3xl  text-gray-950 p-2 py-1 ">New Leaf</h1>
       </Link>
       <nav className="flex ml-auto divide-x">
-        <Link href="/" className="text-blue-500 hover:underline px-1.5">
+        <Link href="/" className="text-blue-700 hover:underline px-1.5">
           Home
         </Link>
-        <Link href="/about" className="text-blue-500 hover:underline px-1.5">
+        <Link href="/about" className="text-blue-700 hover:underline px-1.5">
           About
         </Link>
       </nav>

@@ -26,7 +26,9 @@ const AboutPage = () => {
         exercitationem, quas rem voluptas totam quo cupiditate sapiente at quos
         nostrum in.
       </p>
-      <footer className="mt-auto text-xl font-semibold">Made by Bot</footer>
+      <footer className="mt-auto text-xl font-semibold">
+        Made by Bot and Raver
+      </footer>
     </main>
   );
 };

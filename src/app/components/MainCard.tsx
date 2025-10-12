@@ -14,7 +14,7 @@ export default function MainCard({title, content, href}: props) {
             shadow-md group-hover:shadow-lg flex flex-col
           `}
       >
-        <h2 className="text-2xl font-bold group-hover:underline text-blue-400">
+        <h2 className="text-2xl font-bold group-hover:underline text-blue-600">
           {title}
         </h2>
         <p className="overflow-hidden text-ellipsis line-clamp-7">{content}</p>
