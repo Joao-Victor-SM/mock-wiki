@@ -1,4 +1,4 @@
-import {CardSectionInterface} from '../(reader)/types/Cards';
+import {CardSectionInterface} from '../types/Cards';
 import MainCard from './MainCard';
 
 export default function CardSection({cards, title}: CardSectionInterface) {
