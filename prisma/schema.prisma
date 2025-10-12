@@ -12,6 +12,7 @@ model News {
   identificator String   @unique
   title         String
   content       String   @db.Text
+  preview       String?
   tagId         Int?
   tag           Tag?     @relation(fields: [tagId], references: [id])
   createdAt     DateTime @default(now())
