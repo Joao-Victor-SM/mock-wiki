@@ -2,14 +2,14 @@ import {prisma} from '@/lib/prisma';
 import {NextResponse} from 'next/server';
 
 interface Params {
-  identificator: string;
+  identifier: string;
 }
 
 export async function GET(req: Request, {params}: {params: Params}) {
   try {
-    const {identificator} = params;
+    const {identifier} = params;
     const selectedArticle = await prisma.news.findUnique({
-      where: {identificator},
+      where: {identifier},
     });
 
     return NextResponse.json(selectedArticle);

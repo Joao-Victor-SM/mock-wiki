@@ -3,7 +3,7 @@ import {prisma} from '@/lib/prisma';
 
 const getPageInfo = async (identifier: string) => {
   const article = await prisma.news.findUnique({
-    where: {identificator: identifier},
+    where: {identifier},
     include: {tag: true},
   });
 

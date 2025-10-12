@@ -8,14 +8,14 @@ datasource db {
 }
 
 model News {
-  id            Int      @id @default(autoincrement())
-  identificator String   @unique
-  title         String
-  content       String   @db.Text
-  preview       String?
-  tagId         Int?
-  tag           Tag?     @relation(fields: [tagId], references: [id])
-  createdAt     DateTime @default(now())
+  id         Int      @id @default(autoincrement())
+  identifier String   @unique
+  title      String
+  content    String   @db.Text
+  preview    String?
+  tagId      Int?
+  tag        Tag?     @relation(fields: [tagId], references: [id])
+  createdAt  DateTime @default(now())
 }
 
 model Tag {
