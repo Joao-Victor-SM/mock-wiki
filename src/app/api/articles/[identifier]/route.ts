@@ -1,11 +1,11 @@
 import {prisma} from '@/lib/prisma';
-import {NextResponse} from 'next/server';
+import {NextResponse, NextRequest} from 'next/server';
 
 interface Params {
   identifier: string;
 }
 
-export async function GET(req: Request, {params}: {params: Params}) {
+export async function GET(req: NextRequest, {params}: {params: Params}) {
   try {
     const {identifier} = params;
     const selectedArticle = await prisma.news.findUnique({
