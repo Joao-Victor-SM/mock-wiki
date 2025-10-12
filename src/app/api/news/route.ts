@@ -1,0 +1,16 @@
+import {prisma} from '@/app/lib/prisma';
+import {NextResponse} from 'next/server';
+
+// GET /api/news
+export async function GET() {
+  try {
+    const news = await prisma.news.findMany({
+      orderBy: {createdAt: 'desc'},
+      include: {tag: true},
+    });
+    return NextResponse.json(news);
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json({error: 'Failed to fetch news'}, {status: 500});
+  }
+}
