@@ -1,14 +1,6 @@
-interface Tag {
-  id: number;
-  name: string;
-}
-export interface Card {
-  title: string;
-  content: string;
-  identificator: string;
-  tag?: Tag;
-}
+import type {News} from '@prisma/client';
+
 export interface CardSectionInterface {
   title: string;
-  cards: Card[];
+  cards: News[];
 }
