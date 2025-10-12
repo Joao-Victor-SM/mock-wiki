@@ -1,5 +1,5 @@
 import CardSection from './components/CardSection';
-import {GET as getCardsHandler} from './api/cards/route';
+import {GET as getCardsHandler} from './api/articles/route';
 import {CardSectionInterface} from './types/Cards';
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 };
 
 const res = await getCardsHandler();
-const cards: CardSectionInterface[] = await res.json();
+const articles: CardSectionInterface[] = await res.json();
 
 const App = async () => {
   return (
@@ -31,7 +31,7 @@ const App = async () => {
           materials is strictly prohibited.
         </p>
       </section>
-      {cards.map((card, key) => (
+      {articles.map((card, key) => (
         <CardSection title={card.title} cards={card.cards} key={key} />
       ))}
     </main>

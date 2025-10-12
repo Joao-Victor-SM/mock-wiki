@@ -1,7 +1,12 @@
+interface Tag {
+  id: number;
+  name: string;
+}
 export interface Card {
   title: string;
-  href: string;
   content: string;
+  identificator: string;
+  tag?: Tag;
 }
 export interface CardSectionInterface {
   title: string;
