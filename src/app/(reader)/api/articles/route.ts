@@ -17,7 +17,10 @@ export async function GET() {
       cards: tag.news,
     }));
     console.log(sections);
-    return NextResponse.json<CardSectionInterface[]>(sections);
+    return NextResponse.json<CardSectionInterface[]>(sections, {
+      status: 200,
+      headers: {'Cache-Control': 'no-store'},
+    });
   } catch (error) {
     console.error(error);
     return NextResponse.json({error: 'Failed to fetch news'}, {status: 500});
