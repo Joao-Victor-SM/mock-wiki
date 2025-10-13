@@ -1,3 +1,4 @@
+'use client';
 import Tiptap from './components/Editor';
 
 export default function CreateArticle() {
