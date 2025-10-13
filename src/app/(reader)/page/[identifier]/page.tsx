@@ -1,17 +1,21 @@
 import getPageInfo from '../utils/getPageInfo';
 
-interface WikiPageProps {
-  params: {identifier: string};
+interface Params {
+  identifier: string;
 }
 
-export function generateMetadata({params}: WikiPageProps) {
+interface WikiPageProps {
+  params: Params;
+}
+
+export async function generateMetadata({params}: WikiPageProps) {
   return {
     title: `Index #${params.identifier}`,
   };
 }
 
-export default async function WikiPage(props: WikiPageProps) {
-  const {identifier} = props.params;
+export default async function WikiPage({params}: {params: Params}) {
+  const {identifier} = params;
   const {article} = await getPageInfo(identifier);
 
   return (
