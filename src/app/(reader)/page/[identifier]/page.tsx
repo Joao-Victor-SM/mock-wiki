@@ -10,7 +10,9 @@ interface WikiPageProps {
   params: {identifier: string};
 }
 
-export default async function WikiPage({params}: WikiPageProps) {
+export default async function WikiPage(props: Promise<WikiPageProps>) {
+  //todo: organize this later
+  const {params} = await props;
   const {identifier} = params;
   const {article} = await getPageInfo(identifier);
 
