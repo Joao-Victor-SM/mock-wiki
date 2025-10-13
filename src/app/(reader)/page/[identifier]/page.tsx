@@ -1,19 +1,17 @@
 import getPageInfo from '../utils/getPageInfo';
 
+interface WikiPageProps {
+  params: {identifier: string};
+}
+
 export function generateMetadata({params}: WikiPageProps) {
   return {
     title: `Index #${params.identifier}`,
   };
 }
 
-interface WikiPageProps {
-  params: {identifier: string};
-}
-
-export default async function WikiPage(props: Promise<WikiPageProps>) {
-  //todo: organize this later
-  const {params} = await props;
-  const {identifier} = params;
+export default async function WikiPage(props: WikiPageProps) {
+  const {identifier} = props.params;
   const {article} = await getPageInfo(identifier);
 
   return (
@@ -23,6 +21,6 @@ export default async function WikiPage(props: Promise<WikiPageProps>) {
       flex gap-3 justify-start font-mono text-sm text-gray-800
       rounded-sm flex-col"
       dangerouslySetInnerHTML={{__html: article?.safeContent ?? 'Not found'}}
-    ></article>
+    />
   );
 }
