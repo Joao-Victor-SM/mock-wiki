@@ -1,8 +1,9 @@
 {
-    "tasks": {
-    "build": {
-        "env": ["DATABASE_URL"]
+    "pipeline": {
+      "build": {
+        "dependsOn": ["^build"],
+        "outputs": ["dist/**"],
+        "env": ["MY_BUILD_VAR"] 
+      }
     }
-}
-
-}
+  }
