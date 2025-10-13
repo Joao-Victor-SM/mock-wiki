@@ -1,3 +1,4 @@
+import {Param} from '@prisma/client/runtime/library';
 import getPageInfo from '../utils/getPageInfo';
 
 interface Params {
@@ -14,8 +15,8 @@ export async function generateMetadata({params}: WikiPageProps) {
   };
 }
 
-export default async function WikiPage({params}: {params: Params}) {
-  const {identifier} = params;
+export default async function WikiPage({params}: {params: Promise<Params>}) {
+  const {identifier} = await params;
   const {article} = await getPageInfo(identifier);
 
   return (
