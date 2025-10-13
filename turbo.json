@@ -3,7 +3,7 @@
       "build": {
         "dependsOn": ["^build"],
         "outputs": ["dist/**"],
-        "env": ["MY_BUILD_VAR"] 
+        "env": ["DATABASE_URL"] 
       }
     }
   }
