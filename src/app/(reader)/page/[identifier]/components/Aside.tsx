@@ -2,7 +2,7 @@ import RecommendationCard from './RecommendationCard';
 
 export default function Aside() {
   return (
-    <aside className="w-80 border border-gray-400 bg-gradient-to-b from-gray-100 to-gray-200 p-1 shadow-md grid content-start gap-1">
+    <aside className="w-80 border border-gray-400 bg-gradient-to-b from-gray-100 to-gray-200 p-1 shadow-md grid content-start gap-1 ">
       <RecommendationCard
         href="132"
         title="House Locke"

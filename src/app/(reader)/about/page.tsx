@@ -4,7 +4,7 @@ export const metadata = {
 
 const AboutPage = () => {
   return (
-    <main className="md:px-24 p-4 sm:p-8 h-full flex flex-col space-y-6">
+    <main className="md:px-12 lg:px-24 p-4 sm:p-8 h-full flex flex-col space-y-6">
       <h1 className="text-6xl font-bold">About us</h1>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
