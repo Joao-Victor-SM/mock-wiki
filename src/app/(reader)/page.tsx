@@ -3,14 +3,19 @@ import {GET as getCardsHandler} from './api/articles/route';
 import {CardSectionInterface} from './types/Cards';
 
 export const metadata = {
-  title: 'New Leaf - Home',
+  title: 'Home',
   description: 'Foster care nonprofit institution',
 };
 
+const isErrorResponse = (data: unknown): data is {error: string} =>
+  typeof data === 'object' && data !== null && 'error' in data;
+
 const res = await getCardsHandler();
-const articles: CardSectionInterface[] = await res.json();
+const articles: CardSectionInterface[] | {error: string} = await res.json();
 
 const App = async () => {
+  if (isErrorResponse(articles)) return <p role="alert">Error {res.status}</p>;
+
   return (
     <main className="sm:px-24 p-4 sm:p-8 grid content-start gap-8">
       <section className="grid gap-4">
@@ -31,7 +36,8 @@ const App = async () => {
           materials is strictly prohibited.
         </p>
       </section>
-      {articles
+
+      {(articles ?? [])
         .filter((article) => article.cards.length)
         .map((card, key) => (
           <CardSection title={card.title} cards={card.cards} key={key} />
