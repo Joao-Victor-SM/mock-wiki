@@ -9,21 +9,6 @@ const getPageInfo = async (identifier: string) => {
 
   if (!article) return {article: null};
 
-  const sameTagNews = article.tagId
-    ? await prisma.news.findMany({
-        where: {
-          tagId: article.tagId,
-          identifier: {not: identifier},
-        },
-        select: {
-          id: true,
-          title: true,
-          preview: true,
-          content: true,
-          identifier: true,
-        },
-      })
-    : [];
   const safeContent = sanitizeHtml(article.content, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat([
       'img',
