@@ -24,7 +24,7 @@ export default async function WikiPage({params}: WikiPageProps) {
       className="min-h-full p-4 w-full md:w-[clamp(320px,80vw,800px)] 
       border border-gray-400 bg-gray-100
       flex gap-3 justify-start font-mono text-sm text-gray-800
-      flex-col shadow-md"
+      flex-col shadow-md flex-1"
       dangerouslySetInnerHTML={{__html: article?.safeContent ?? 'Not found'}}
     />
   );
