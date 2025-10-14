@@ -22,9 +22,9 @@ export default async function WikiPage({params}: WikiPageProps) {
   return (
     <article
       className="min-h-full p-4 w-full md:w-[clamp(320px,80vw,800px)] 
-      border border-gray-400 shadow-inner bg-gradient-to-b from-gray-100 to-gray-200 
+      border border-gray-400 bg-gray-100
       flex gap-3 justify-start font-mono text-sm text-gray-800
-      rounded-sm flex-col"
+      flex-col shadow-md"
       dangerouslySetInnerHTML={{__html: article?.safeContent ?? 'Not found'}}
     />
   );
