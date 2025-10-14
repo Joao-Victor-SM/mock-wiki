@@ -17,7 +17,7 @@ const App = async () => {
   if (isErrorResponse(articles)) return <p role="alert">Error {res.status}</p>;
 
   return (
-    <main className="sm:px-24 p-4 sm:p-8 grid content-start gap-8">
+    <main className="md:px-24 p-4 sm:p-8 grid content-start gap-8">
       <section className="grid gap-4">
         <h1 className="text-6xl font-bold">Home</h1>
         <p>

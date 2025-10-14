@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className="bg-gray-200 flex p-4 sm:px-24 items-center border-b">
+    <header className="bg-gray-200 flex items-center border-b p-4 md:px-24">
       <Link
         href="/"
         className="cursor-pointer select-none flex gap-[3px] almendra-bold-italic items-center"
