@@ -22,9 +22,8 @@ export default function MainCard({title, content, href}: props) {
         <footer className="mt-auto flex justify-end">
           <button
             type="button"
-            className="border bg-gray-300 px-2 hover:border-gray-600 hover:*:inline"
+            className="border bg-gray-300 px-2 hover:border-gray-600 hover:brightness-90 cursor-pointer"
           >
-            <span className="hidden">{'> '}</span>
             Read more
           </button>
         </footer>
