@@ -16,10 +16,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <body className="min-h-screen bg-neutral-200 flex flex-col">
+    <>
       <Header />
       {children}
       <Footer />
-    </body>
+    </>
   );
 }

@@ -11,7 +11,7 @@ export default async function Login({
     : null;
 
   return (
-    <main className="h-full flex justify-center items-center bg-gray-300">
+    <main className="min-h-screen flex justify-center items-center bg-gray-300">
       <form
         action="/api/login"
         method="post"
