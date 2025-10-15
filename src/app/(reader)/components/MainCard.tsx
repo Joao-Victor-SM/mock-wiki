@@ -6,9 +6,9 @@ export default function MainCard({title, content, identifier}: Partial<News>) {
     <Link href={`/page/${identifier}`} className="group">
       <article
         className={`
-            bg-gradient-to-b from-gray-100 to-gray-200 p-4 border border-gray-400 h-72 group-hover:to-gray-300 transition-all duration-400
+            bg-gradient-to-b from-gray-100 to-gray-200 p-4 border border-gray-400 h-72 group-hover:to-gray-300
             shadow-md group-hover:shadow-lg flex flex-col
-          `}
+        `}
       >
         <h2 className="text-2xl font-bold group-hover:underline text-blue-600">
           {title}
