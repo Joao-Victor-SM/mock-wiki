@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export default async function Login({
   searchParams,
 }: {
@@ -11,7 +13,7 @@ export default async function Login({
     : null;
 
   return (
-    <main className="min-h-screen flex justify-center items-center bg-gray-300">
+    <main className="min-h-screen flex flex-col justify-center items-center bg-gray-300 relative">
       <form
         action="/api/login"
         method="post"
@@ -55,6 +57,12 @@ export default async function Login({
           Login
         </button>
       </form>
+      <Link
+        href="/"
+        className="underline text-blue-600 hover:text-blue-500 absolute bottom-2"
+      >
+        Home
+      </Link>
     </main>
   );
 }
