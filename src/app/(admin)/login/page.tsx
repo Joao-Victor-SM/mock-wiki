@@ -15,7 +15,7 @@ export default async function Login({
       <form
         action="/api/login"
         method="post"
-        className="border-2 p-4 grid gap-4 w-[clamp(320px,100vw,600px)] min-h-80 content-start bg-gradient-to-b from-gray-100 to-gray-300 border-gray-400 shadow-md"
+        className="border-2 p-4 grid gap-4 w-[clamp(320px,calc(100vw-20px),600px)] min-h-80 content-start bg-gradient-to-b from-gray-100 to-gray-300 border-gray-400 shadow-md"
       >
         <h1 className="text-5xl font-bold">Login</h1>
         <p className="font-semibold text-xl">Access to administrator panel</p>
