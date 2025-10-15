@@ -3,8 +3,9 @@ import {News} from '@prisma/client';
 import getWordSetFromText from './getWordSetFromText';
 
 export default async function getSimilarArticles(
-  article: News,
+  article: News | null,
 ): Promise<News[]> {
+  if (!article) return [];
   const sameTagNews = await prisma.news.findMany({
     where: {
       tagId: article.tagId,
