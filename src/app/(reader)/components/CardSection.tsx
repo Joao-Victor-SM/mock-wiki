@@ -7,12 +7,7 @@ export default function CardSection({cards, title}: CardSectionInterface) {
       <h2 className="text-4xl font-bold">{title}</h2>
       <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-4">
         {cards.map((card, key) => (
-          <MainCard
-            href={`/page/${card.identifier}`}
-            title={card.title}
-            content={card.content}
-            key={key}
-          />
+          <MainCard key={key} {...card} />
         ))}
       </div>
     </section>

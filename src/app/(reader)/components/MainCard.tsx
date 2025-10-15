@@ -1,13 +1,9 @@
+import {News} from '@prisma/client';
 import Link from 'next/link';
 
-interface props {
-  href: string;
-  title: string;
-  content: string;
-}
-export default function MainCard({title, content, href}: props) {
+export default function MainCard({title, content, identifier}: Partial<News>) {
   return (
-    <Link href={href} className="group">
+    <Link href={`/page/${identifier}`} className="group">
       <article
         className={`
             bg-gradient-to-b from-gray-100 to-gray-200 p-4 border border-gray-400 h-72 group-hover:to-gray-300 transition-all duration-400
