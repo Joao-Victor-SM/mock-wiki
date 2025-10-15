@@ -1,5 +1,6 @@
 import sanitizeHtml from 'sanitize-html';
 import {prisma} from '@/lib/prisma';
+import {notFound} from 'next/navigation';
 
 const getPageInfo = async (identifier: string) => {
   const article = await prisma.news.findUnique({
@@ -7,7 +8,7 @@ const getPageInfo = async (identifier: string) => {
     include: {tag: true},
   });
 
-  if (!article) return {article: null};
+  if (!article) return notFound();
 
   const safeContent = sanitizeHtml(article.content, {
     allowedTags: sanitizeHtml.defaults.allowedTags.concat([
