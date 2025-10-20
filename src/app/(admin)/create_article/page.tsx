@@ -1,8 +1,5 @@
 'use client';
 
-import {Delta} from 'quill-next';
-import QuillEditor from 'quill-next-react';
-
 export default function CreateArticle() {
   return (
     <main className="bg-gray-200 p-4 flex flex-col h-screen items-start gap-2 ">
@@ -23,11 +20,7 @@ export default function CreateArticle() {
 
         <div className="flex-1 flex flex-col">
           <label className="text-xl mb-1">Body</label>
-          <QuillEditor
-            defaultValue={new Delta()}
-            config={{theme: 'next'}}
-            className="flex-1 w-full border border-gray-300 shadow"
-          />
+          TODO: Put a rich editor here
         </div>
 
         <div className="flex justify-end w-full">

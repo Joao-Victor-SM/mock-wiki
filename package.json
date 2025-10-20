@@ -20,8 +20,6 @@
     "lodash.throttle": "^4.1.1",
     "next": "15.5.4",
     "prisma": "^6.17.1",
-    "quill-next": "^2.2.1",
-    "quill-next-react": "^1.1.0",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-hotkeys-hook": "^5.1.0",
